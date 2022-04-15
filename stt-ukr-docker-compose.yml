@@ -1,0 +1,12 @@
+version: "3.4"
+
+services:
+  stt-ukr-stub:
+    image: intellidockers/stt-ukr-stub:latest
+    container_name: intellidockers_stt-ukr-stub
+    ports:
+      - "8989:8989"
+    environment:
+      - PROCESSES=1
+      - THREADS=2
+      - LICENSE=ADD_YOUR_LICENSE_KEY
