@@ -6,6 +6,9 @@
 - run .\install.ps1
 
 # Running
-when you start the project, make sure you configure it first:
+Before you start the project, make sure you configure it first:
 - stt-ukr-docker-compose.yml
   - LICENSE - add your license key
+
+- Open a Powershell console
+  - run .\sarasvati.ps1
