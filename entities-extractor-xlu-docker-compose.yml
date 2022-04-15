@@ -1,0 +1,12 @@
+version: "3.4"
+
+services:
+  entity-extractor-xlu-stub:
+    image: intellidockers/entity-extractor-xlu-stub:latest
+    container_name: intellidockers_entity-extractor-xlu-stub
+    ports:
+      - "9090:8989"
+    environment:
+      - PROCESSES=1
+      - THREADS=2
+      - LICENSE=ADD_YOUR_LICENSE_KEY
