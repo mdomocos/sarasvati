@@ -1,7 +1,7 @@
 version: "3.4"
 
 services:
-  stt-ukr-stub:
+  atos_sarasvati:
     image: mdomocos/sarasvati:latest
     container_name: atos_sarasvati
     ports:
