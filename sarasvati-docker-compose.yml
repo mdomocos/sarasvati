@@ -1,0 +1,10 @@
+version: "3.4"
+
+services:
+  stt-ukr-stub:
+    image: mdomocos/sarasvati:latest
+    container_name: atos_sarasvati
+    ports:
+      - "8200:8200"
+    environment:
+      - LICENSE=ADD_YOUR_LICENSE_KEY
