@@ -8,4 +8,5 @@ Start-Process ".\docker-20.10.14\docker\docker.exe" -ArgumentList "system prune 
 .\docker-compose.exe -f stt-ukr-docker-compose.yml up -d 
 .\docker-compose.exe -f entities-extractor-xlu-docker-compose.yml up -d
 .\docker-compose.exe -f sarasvati-docker-compose.yml up -d
+Start-Process "http://127.0.0.1:8200"a
 Read-Host -Prompt "Press Enter to exit"
