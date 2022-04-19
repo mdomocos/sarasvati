@@ -9,4 +9,14 @@ services:
     environment:
       - PROCESSES=1
       - THREADS=2
-      - LICENSE=ADD_YOUR_LICENSE_KEY
+      - LICENSE=xnk6MZhbn3cpDYVduAdRCKQ22hvLkUlAzHdDS6z2mPb4hXvpYaiPKWcfEHOAc7tBVBw5bau2vsftODSf8ClUrXtkZ5wyhScWYGMnzz3v/CzeUe+/gn3NM/STQjKzIckA3U9jCn7UMSVJX4GmDxB8h470hP21AmIRH8RfuziubybbVJ/tJwFsrLZKaEKdiAJRBllNWNAk4ZD2+S4W03esmnEIGHVxi9MuYccjuLu1WgHJ7wo7H7v7y2YOgqqijVTOYEO2dgDidiHDICHKlAcQLux35WumwiO28FTa5ykfoDtoYBg86ytjytzi2yfeqpN7T1qLpIIXeFJVv+7pPiW6L8PPTeYeUzG716cKbPSSowzewOyYS7W8YREFByal0JAm2CHZtVoyVO8zg5IFVkwtp0RX8aCJPgjVSCf2NUShkOOeMSvyE2DAKrKSpjM3tmVnQhUYb9Sny3xk0YT4FDbXH6aM1o7FcQYiqtfKm9DojLmm01Ulpj+meYY9ltLwVd0Qt1WkoRQIOtf1dsTWftWAfYnEnRQL3Au37JLGrXpCpHncsl4RG+mavqvHi4rD1K/3lwrtOW0ij3GY7To7a5gRz27KMtrCqtyf/vMw+QHbRQTNnW1EqfyBgPfovmNLNoUf7rhx/v02FmAZAOgzbO/LlQm3Z5FwvALj+qSkO3jMC9AG25nU6ZeOk/TdA5U/oS0RqSNb+xe0upixqZyguygwInUIwHMfRxAaeERPa9rPiGAG27fJERiJt0csYLdPlReFYJC7cz3086+LTiAFszvw5d80ieEC2+VyAWt1ImuH2JprOLNgL82fqJ5UjfLDOeGa/jfkJcWTQduhmDPj/kI+MasI6kkOLhHluO59luI8czbl50Gfs3OLyjHgz7VNI90bVnPWx4/sLbZ086Sl+62DosWmo80Hvt1mHBWcWxDipiuc4RsFPVQkAs3DQkHjO4B96AeHQ+3jQo64Zf6sKyQpohor/V1K41agVJ5NkhzGiSqImj2TNE8rUOJXXxv/xrzb7o2FXldKMMo+5cypmgrM4Go4VNyN6Cy9TvjnVKDOUCFWOVkerNI2/FAcfzUcUV7nG8HjVitXTo9CpqXvcGNNQ4V6p5L65GDm2RaRr4xY6BuandDjra3g+g6qQh+krbe6
+    networks:
+        appnet:
+            ipv4_address: 10.0.0.100
+networks:
+    appnet:
+        driver: nat
+        ipam:
+            driver: default
+            config:
+                - subnet: "10.0.0.0/24"
