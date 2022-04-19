@@ -1,7 +1,10 @@
 Read-Host -Prompt "Press Enter to install Sarasvati. Make sure you run this script as an Administrator. Reboots will be required."
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Set-ExecutionPolicy RemoteSigned
-
+Read-Host -Prompt "Enabling Containers Feature - Do not accept the restart."
+Enable-WindowsOptionalFeature -Online -FeatureName containers –All
+Read-Host -Prompt "Enabling Hyper-V Feature - When asked, restart your computer. Run this script again after the restart."
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V –All
 wsl --install
 
 Invoke-WebRequest -Uri "https://github.com/linuxkit/lcow/releases/download/v4.14.35-v0.3.9/release.zip" -UseBasicParsing -OutFile release.zip
