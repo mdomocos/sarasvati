@@ -5,8 +5,6 @@ Write-Output "Enabling Containers Feature - Do not accept the restart."
 Enable-WindowsOptionalFeature -Online -FeatureName containers -All
 Write-Output "Enabling Hyper-V Feature - Do not accept the restart."
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
-Write-Output "Enabling Windows Subsystem for Linux - Do not accept the restart."
-wsl --install
 
 Invoke-WebRequest -Uri "https://github.com/linuxkit/lcow/releases/download/v4.14.35-v0.3.9/release.zip" -UseBasicParsing -OutFile release.zip
 Expand-Archive release.zip -DestinationPath "$Env:ProgramFiles\Linux Containers\."
