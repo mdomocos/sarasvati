@@ -1,15 +1,15 @@
 version: "3.4"
 
 services:
-  entity-extractor-xlu-stub:
-    image: intellidockers/entity-extractor-xlu-stub:latest
-    container_name: intellidockers_entity-extractor-xlu-stub
+  entity-extractor-xlu:
+    image: intellidockers/entity-extractor-xlu:2.0
+    container_name: intellidockers_entity-extractor-xlu
     ports:
       - "9090:8989"
     environment:
       - PROCESSES=1
       - THREADS=2
-      - LICENSE=Gxtdg/Q0JU4EpKeYmaaGbLQZNByyqNTfs4KM2+B5hXuufsH0lzmUJ4+miDMi/gilcw0Ga5VoNzK908hVwR1RYCladEfdou1hJs/phuUDEkTAyM97IQPQDI6ReZXplglUTeM+zB4qsd5tZXvH1KfXBmeeG8/zoYr930zJcHvGvaC4aNaI9bhIdbO9ey06fK3asjPfFXmnQvU81n8n0o/+R3RGHTXpKXoGqNb6PtElCPPhQo1oSmdNBD79/gJUgmSp74CPiER5heTR/cOTlRHTW9VIsrRI3Pww3FfKmizo6bMpsnsKLpEzPsw51cA3rGxpwEmoi6mapFWQFnhyfF2+jZqld5O3h2vdsif3nRaPI36Lg6Q1Y/OIj6Fg1Ej181YITdf0Wk9aaYnjpGP6vUtVNytv9kNb7Sz1O1k5MoadcmNZpmijqAV6gndulUzD1xGV9QSXwbLscv7ENErpylDz3fgeXf7n5cmNe34NJc8fK6qnpQrivWA5RyHTdXt4TlEUUQJ8im5Wez8DyFGic0j8hmUX1Xr736ZswbcWo9mWMtq5wxklo/0EpXJecpp7FDJCZz73PE0IMj1TVcK7b+QTU3JeYdXxVxY0WMYqGASKuEfHwGSFUQM7zr3fwtNsqtaP7zAlUiriAoiqxLwuVDZ8Ob+00NRffh8C8ZNi+SMISgpzXvSjfvx746vWR7DG42xV3UvM3r1tKnl55b9cldIdAOzQ2O2uLu3miVN6SRjcp9cqD0LDTFWL/tkzsjneDrcgY1W+B/m55lbnbVOUhwrZX/R0r85Gr5JbW2Z0qW9t0q9DWVBsldUfKXS4XHfgB3unKv0n4d+KsFc54pbW/X88IESTmjnGw/qfYHqMihk/LG2U7pYK0GJ30uuDozWdSGE8T7NZCHYjqWjjpkpBGlG77+zf7JhVhMqwr8tM5AqV++3bvWbDe1yXZh4ujoe6KNNl0Mv5YoY7SIqtXB4spbAs23SN10GxsgUTFrMFcH371l7jcyp0+pUATS1lzlAiqrKka8zYHVKmsAJIOyzCCpDseaLmaJYzms5PQ2lVcLWy7gtmDlm1yVCBCs2OG93HhtMCcXOpWavBi84nP0bAvzq5Zxd433StsPB2Kz31HxAIK6Pps6OcIX2e4IjxvJkE6tcralHSJI6s6rnHi37I9yB1Xg==
+      - LICENSE=ADD_YOUR_LICENSE_KEY
     networks:
         appnet:
             ipv4_address: 10.0.0.101
